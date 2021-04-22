@@ -1,0 +1,7 @@
+172.18.0.1 - - [21/Apr/2021:03:41:04 +0000] "POST /predict HTTP/1.1" 200 5062 "-" "python-requests/2.22.0"
+172.18.0.1 - - [21/Apr/2021:03:44:31 +0000] "POST /predict HTTP/1.1" 200 5062 "-" "python-requests/2.22.0"
+172.19.0.1 - - [21/Apr/2021:03:52:21 +0000] "POST /predict HTTP/1.1" 200 5062 "-" "python-requests/2.22.0"
+172.20.0.1 - - [21/Apr/2021:03:54:12 +0000] "POST /predict HTTP/1.1" 200 4990 "-" "python-requests/2.22.0"
+172.21.0.1 - - [21/Apr/2021:06:22:50 +0000] "POST /predict HTTP/1.1" 200 5065 "-" "python-requests/2.22.0"
+172.31.0.1 - - [21/Apr/2021:10:10:55 +0000] "POST /private/v1/push_paltoon HTTP/1.1" 200 5065 "-" "python-requests/2.22.0"
+192.168.16.1 - - [22/Apr/2021:07:03:03 +0000] "POST /private/v1/push_paltoon HTTP/1.1" 200 5065 "-" "python-requests/2.22.0"

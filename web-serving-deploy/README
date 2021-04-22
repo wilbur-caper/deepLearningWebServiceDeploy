@@ -1,0 +1,12 @@
+# Requirement
+1. install docker CE, ref: https://docks.docker.com/install/docker-ce/ubuntu/
+2. install docker-compose, ref: https://docs.docker.com/compose/install/
+
+# Configuration
+1. Modify caffe-rest-api/run_model_server.py to adapt your model
+2. Modify width/height parameters in caffe-rest-api/setting.py
+3. Share your caffe env and source code with docker container in docker-compose.yml
+
+# Run
+1. run cmd: docker-compose up -d in the same folder with docker-compose.yml
+

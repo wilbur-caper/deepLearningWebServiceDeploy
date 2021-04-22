@@ -1,0 +1,29 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 03:40:17.455180 2021] [mpm_event:notice] [pid 7:tid 139685533759360] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 03:40:17.455545 2021] [core:notice] [pid 7:tid 139685533759360] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 03:52:02.158761 2021] [mpm_event:notice] [pid 7:tid 140130434418560] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 03:52:02.158824 2021] [core:notice] [pid 7:tid 140130434418560] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 03:53:28.233151 2021] [mpm_event:notice] [pid 7:tid 140386091870080] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 03:53:28.233203 2021] [core:notice] [pid 7:tid 140386091870080] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 06:22:29.366560 2021] [mpm_event:notice] [pid 8:tid 139995598518144] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 06:22:29.366612 2021] [core:notice] [pid 8:tid 139995598518144] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.30.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 10:00:55.622853 2021] [mpm_event:notice] [pid 7:tid 140271198791552] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 10:00:55.623174 2021] [core:notice] [pid 7:tid 140271198791552] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.30.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 10:06:27.304180 2021] [core:warn] [pid 8:tid 140643431942016] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Apr 21 10:06:27.304818 2021] [mpm_event:notice] [pid 8:tid 140643431942016] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 10:06:27.304831 2021] [core:notice] [pid 8:tid 140643431942016] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.31.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 21 10:10:47.095297 2021] [mpm_event:notice] [pid 7:tid 139845111891840] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Wed Apr 21 10:10:47.095348 2021] [core:notice] [pid 7:tid 139845111891840] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00112: Warning: DocumentRoot [/opt/torch-rest-api] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 22 07:01:21.635788 2021] [mpm_event:notice] [pid 7:tid 139938159449984] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Thu Apr 22 07:01:21.635854 2021] [core:notice] [pid 7:tid 139938159449984] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.16.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 22 07:02:33.711685 2021] [mpm_event:notice] [pid 7:tid 139877567264640] AH00489: Apache/2.4.18 (Ubuntu) mod_wsgi/4.3.0 Python/3.5.2 configured -- resuming normal operations
+[Thu Apr 22 07:02:33.711739 2021] [core:notice] [pid 7:tid 139877567264640] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

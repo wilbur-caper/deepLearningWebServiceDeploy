@@ -1,0 +1,66 @@
+# Start FROM Nvidia PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
+FROM nvcr.io/nvidia/pytorch:20.10-py3
+
+# Install dependencies
+RUN pip install --upgrade pip Cython matplotlib>=3.2.2 numpy>=1.18.5 opencv-python>=4.1.2 Pillow PyYAML>=5.3 scipy>=1.4.1 tensorboard>=2.2 torch>=1.6.0 torchvision>=0.7.0 tqdm>=4.41.0 seaborn pandas && \
+    pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+#RUN pip install gsutil
+
+# Create working directory
+
+ENV YOLOV5_ROOT=/opt
+WORKDIR $YOLOV5_ROOT
+
+# Copy contents
+COPY . $YOLOV5_ROOT
+
+# Copy weights
+#RUN python3 -c "from models import *; \
+#attempt_download('weights/yolov5s.pt'); \
+#attempt_download('weights/yolov5m.pt'); \
+#attempt_download('weights/yolov5l.pt')"
+
+# ---------------------------------------------------  Extras Below  ---------------------------------------------------
+
+RUN pip3 install protobuf -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN apt-get update && apt-get install -y apache2 libapache2-mod-wsgi-py3 && rm -rf /var/lib/apt/lists/*
+RUN pip install -U pip 
+RUN pip3 install flask
+
+RUN pip3 install redis==3.4.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
+RUN pip3 install requests==2.22.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+WORKDIR $YOLOV5_ROOT
+
+
+CMD ["/opt/pytorch-rest-api/run_pytorch_rest_api.sh"]
+
+
+# ---------------------------------------------------  Extras Below  ---------------------------------------------------
+
+# Build and Push
+# t=ultralytics/yolov5:latest && sudo docker build -t $t . && sudo docker push $t
+# for v in {300..303}; do t=ultralytics/coco:v$v && sudo docker build -t $t . && sudo docker push $t; done
+
+# Pull and Run
+# t=ultralytics/yolov5:latest && sudo docker pull $t && sudo docker run -it --ipc=host $t
+
+# Pull and Run with local directory access
+# t=ultralytics/yolov5:latest && sudo docker pull $t && sudo docker run -it --ipc=host --gpus all -v "$(pwd)"/coco:/usr/src/coco $t
+
+# Kill all
+# sudo docker kill $(sudo docker ps -q)
+
+# Kill all image-based
+# sudo docker kill $(sudo docker ps -a -q --filter ancestor=ultralytics/yolov5:latest)
+
+# Bash into running container
+# sudo docker container exec -it ba65811811ab bash
+
+# Bash into stopped container
+# sudo docker commit 092b16b25c5b usr/resume && sudo docker run -it --gpus all --ipc=host -v "$(pwd)"/coco:/usr/src/coco --entrypoint=sh usr/resume
+
+# Send weights to GCP
+# python -c "from utils.general import *; strip_optimizer('runs/train/exp0_*/weights/best.pt', 'tmp.pt')" && gsutil cp tmp.pt gs://*.pt
+
+# Clean up
+# docker system prune -a --volumes

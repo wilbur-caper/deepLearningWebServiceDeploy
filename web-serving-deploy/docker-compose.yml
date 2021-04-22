@@ -1,0 +1,27 @@
+version: '2.4'
+services:
+  model:
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all    
+    image: wilburliu/hs-serving-torch_model:v1
+    volumes:
+    - /home/hs/backup/pytorchDeploy/web-serving-deploy/torch-rest-api:/opt/torch-rest-api
+    - /home/hs/backup/pytorchDeploy/imgs:/opt/imgs
+    links:
+    - redis   
+  web:  
+    image: torch_web_service:v1
+    ports:
+    - "40001:80"
+    volumes:
+    - /home/hs/backup/pytorchDeploy/web-serving-deploy/torch-rest-api:/opt/torch-rest-api
+    - type: bind
+      source: ./apache2/logs
+      target: /var/log/apache2
+    links:
+    - redis
+  redis:
+    image: redis
+    expose:
+      - "6379"
