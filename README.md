@@ -1,2 +1,0 @@
-# deepLearningWebServiceDeploy
-apache、flask、deploy
